@@ -142,10 +142,10 @@ return
                 end
             end                
             if any_idx ~= -1  then                                           -- if idx is saved then set anyhome
-                if anyhome and domoticz.devices(and_idx).inActive then       -- switch On if Off and any device is present
+                if anyhome and domoticz.devices(any_idx).inActive then       -- switch On if Off and any device is present
                     domoticz.devices(any_idx).switchOn()
                 end
-                if not anyhome and domoticz.devices(and_idx).active then     -- switch Off if On and no device is present
+                if not anyhome and domoticz.devices(any_idx).active then     -- switch Off if On and no device is present
                     domoticz.devices(any_idx).switchOff()
                 end    
             end
